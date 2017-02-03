@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RecruitService } from './common/service/recruit.service';
 import { Response } from '@angular/http';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +9,7 @@ import { Response } from '@angular/http';
 export class AppComponent {
 
   recruitInfo: Array<any> = [];
+  isAllCleared: boolean = false;
 
   constructor(private recruitService: RecruitService) {
 
@@ -20,4 +20,9 @@ export class AppComponent {
       this.recruitInfo = response.json();
     });
   }
+
+  clearAll() {
+    this.recruitService.selectedItem = [];
+  }
+
 }

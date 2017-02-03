@@ -1,10 +1,12 @@
 <nav>
   <div class="nav-title">
     <span class="title">招聘职位</span>
-    <span class="btn-clear pull-right">清空</span>
+    <span class="btn-clear pull-right" (click)="clearAll()">清空</span>
   </div>
 
   <div *ngIf="recruitInfo && recruitInfo[0]">
-    <item-list *ngFor="let data of recruitInfo" [data]="data"></item-list>
+    <item-list *ngFor="let data of recruitInfo"
+               [data]="data"
+               [isCleared]="isAllCleared"></item-list>
   </div>
 </nav>
