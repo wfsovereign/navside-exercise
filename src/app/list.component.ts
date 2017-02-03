@@ -25,8 +25,8 @@ export class ItemListComponent {
   }
 
   isBlockSelected() {
-    return _.xor(this.recruitService.selectedItem, this.currentItems).length === 0;
-
+    return !_.isEmpty(this.recruitService.selectedItem) &&
+      _.some(this.currentItems, item => _.includes(this.recruitService.selectedItem, item));
   }
 
   selectAll() {
@@ -41,7 +41,7 @@ export class ItemListComponent {
         this.recruitService.selectedItem.push(id);
       }
     } else if (Array.isArray(id)) {
-      if (_.difference(this.recruitService.selectedItem, id) === 0) {
+      if (_.some(this.currentItems, item => _.includes(this.recruitService.selectedItem, item))) {
         this.recruitService.selectedItem = _.without(this.recruitService.selectedItem, ...id);
       } else if (_.xor(this.recruitService.selectedItem, id).length !== 0) {
         id.forEach(ele => {
