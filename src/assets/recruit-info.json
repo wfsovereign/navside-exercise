@@ -4,14 +4,17 @@
     "count": 47,
     "dataList": [
       {
+        "id": "1",
         "name": "Mac开发工程师",
         "count": 9
       },
       {
+        "id": "2",
         "name": "IOS App测试工程师",
         "count": 18
       },
       {
+        "id": "3",
         "name": "Web前端工程师",
         "count": 20
       }
@@ -22,10 +25,12 @@
     "count": 18,
     "dataList": [
       {
+        "id": "4",
         "name": "网页设计师",
         "count": 8
       },
       {
+        "id": "5",
         "name": "ID/工业设计师",
         "count": 10
       }
