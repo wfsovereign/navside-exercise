@@ -1,0 +1,44 @@
+
+.list-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.list-info {
+  margin-bottom: 8px;
+  color: #fff;
+
+  .list-info-count {
+    display: inline-block;
+    background-color: rgb(81, 106, 118);
+    border-radius: 50px;
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+}
+
+.list-item {
+  font-size: 12px;
+}
+
+.list-item-count {
+  font-size: 12px;
+}
+
+.pull-right {
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 30px;
+
+  li {
+    color: rgb(212, 220, 224);
+  }
+}
+
+input[type=checkbox] {
+  margin-right: 10px;
+}
