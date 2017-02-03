@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RecruitService } from './common/service/recruit.service';
+import { Response } from '@angular/http';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  recruitInfo: Array<any> = [];
+
+  constructor(private recruitService: RecruitService) {
+
+  }
+
+  ngOnInit() {
+    this.recruitService.getRecruitInfo().subscribe((response: Response) => {
+      this.recruitInfo = response.json();
+    });
+  }
 }

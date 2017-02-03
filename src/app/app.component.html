@@ -4,5 +4,7 @@
     <span class="btn-clear pull-right">清空</span>
   </div>
 
-  <item-list></item-list>
+  <div *ngIf="recruitInfo && recruitInfo[0]">
+    <item-list *ngFor="let data of recruitInfo" [data]="data"></item-list>
+  </div>
 </nav>
